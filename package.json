@@ -1,0 +1,25 @@
+{
+  "name": "blimtehbot",
+  "version": "1.0.0",
+  "description": "Telegram bot - blimtehbot",
+  "main": "echo.js",
+  "type": "module",
+  "scripts": {
+    "serverless": "serverless",
+    "release": "serverless deploy",
+    "purge": "serverless remove",
+    "set-webhook": "telegraf -m setWebhook",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "serverless-http": "^3.0.2",
+    "telegraf": "^4.9.1"
+  },
+  "devDependencies": {
+    "serverless": "^3.22.0",
+    "serverless-plugin-typescript": "^2.1.2",
+    "typescript": "^4.8.2"
+  }
+}

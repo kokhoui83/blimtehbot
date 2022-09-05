@@ -1,0 +1,28 @@
+{
+  service: "aws",
+  framework: "3",
+  package: {
+    excludeDevDependencies: true
+  },
+  provider: {
+    name: "aws",
+    runtime: "nodejs16.x"
+  },
+  plugins: [
+    "serverless-plugin-typescript"
+  ],
+  functions: {
+		echo: {
+			name: "blimtehbot-echo",
+			handler: "echo.blimtehbot",
+			events: [
+				{
+					httpApi: {
+						path: "/telegraf",
+						method: "post"
+					}
+				}
+			]
+		}
+	}
+}
