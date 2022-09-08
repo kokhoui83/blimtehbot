@@ -8,4 +8,4 @@ const bot = new Telegraf(token);
 bot.on("text", ctx => ctx.reply(ctx.message.text));
 
 // setup webhook
-export const blimtehbot = http(bot.webhookCallback("/telegraf"));
+export const echobot = http(bot.webhookCallback("/telegraf"));
